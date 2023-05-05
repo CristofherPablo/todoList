@@ -53,17 +53,17 @@ header img {
 }
 
 /* Main basic setup */
-.main {
+.contentContainer {
   flex: 1 1 auto;
   display: flex;
 }
 
-.main .sideBar {
+.contentContainer .sideBar {
   flex: 1;
   background-color: var(--color-secondary);
 }
 
-.main .content {
+.contentContainer .content {
   flex: 3;
   background-color: var(--color-tertiary);
 }

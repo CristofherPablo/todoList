@@ -41,7 +41,7 @@ class PageLayout {
   }
 
   renderMainSection() {
-    const main = `<section class="main">
+    const main = `<section class="contentContainer">
        <div class="sideBar"></div>
        <div class="content"></div>
      </section>`;
