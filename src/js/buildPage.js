@@ -30,7 +30,7 @@ class PageLayout {
   renderHeader() {
     const header = `
     <header>
-     <div class="logo">
+     <div class="logoContainer">
      <img src=${noteIcon} alt="icon of a paper sheet simulating a to-do list"> To-do List
      </div>
      <div class="darkLightMode">
