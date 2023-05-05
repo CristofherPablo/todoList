@@ -10,10 +10,57 @@ html{
     --color-secondary: #343641;
     --color-tertiary: #444654;
     --color-quaternary: #343541;
+    --font-color: #ffffff;
 }
 
 body{
     display: flex;
     flex-direction: column;
+    width: 100%;
+    height: 100%;
 }
 
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    background-color: var(--color-primary);
+}
+
+header .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: larger;
+    color: var(--font-color);
+}
+
+header img{
+    width: 50px;
+}
+
+.main{
+    flex: 1 1 auto;
+}
+
+
+/* Footer basic setup */
+footer{
+    text-align: center;
+    background-color: var(--color-primary);
+    color: var(--font-color);
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--font-color);
+    cursor: pointer;
+}
+
+footer a:hover {
+    color: lightgrey;
+}
