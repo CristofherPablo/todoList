@@ -1,0 +1,19 @@
+body,
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-primary: #202123;
+    --color-secondary: #343641;
+    --color-tertiary: #444654;
+    --color-quaternary: #343541;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+

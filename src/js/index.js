@@ -1,3 +1,5 @@
-import renderIcon from './buildPage';
+import pageLayout from './buildPage';
+// main css style page
+import '../css/index.css';
 
-renderIcon();
+pageLayout.init();
