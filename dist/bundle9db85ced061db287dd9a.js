@@ -23,6 +23,8 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
 // import icon image
 
 
+
+//render page basic layout
 var PageLayout = /*#__PURE__*/function () {
   function PageLayout() {
     _classCallCheck(this, PageLayout);
@@ -55,7 +57,7 @@ var PageLayout = /*#__PURE__*/function () {
   }, {
     key: "renderHeader",
     value: function renderHeader() {
-      var header = "\n    <header>\n     <div class=\"logoContainer\">\n     <img src=".concat(_assets_greyNote_png__WEBPACK_IMPORTED_MODULE_1__, " alt=\"icon of a paper sheet simulating a to-do list\"> To-do List\n     </div>\n     <div class=\"darkLightMode\">\n       <button>Temporary</button>\n     </div>\n    </header>");
+      var header = "\n    <header>\n     <div class=\"logoContainer\">\n     <img src=".concat(_assets_greyNote_png__WEBPACK_IMPORTED_MODULE_1__, " alt=\"icon of a paper sheet simulating a to-do list\"> To-do List\n     </div>\n     <div class=\"darkLightMode\">\n     <input type=\"checkbox\" class=\"checkbox\" id=\"chk\"/>\n     <label for=\"chk\" class=\"label\" title=\"Switch to light mode\">\n       <span class=\"visually-hidden\">Toggle dark mode</span>\n       <i class=\"fas fa-moon\"></i>\n       <i class=\"fas fa-sun\"></i>\n       <div class=\"ball\"></div>\n     </label>\n     </div>\n    </header>");
       this.container.insertAdjacentHTML('beforeend', header);
     }
   }, {
@@ -72,9 +74,65 @@ var PageLayout = /*#__PURE__*/function () {
     }
   }]);
   return PageLayout;
-}();
+}(); //basic page logic
 var pageLayout = new PageLayout();
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (pageLayout);
+
+/***/ }),
+
+/***/ "./src/js/eventListeners.js":
+/*!**********************************!*\
+  !*** ./src/js/eventListeners.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+var PageLogic = /*#__PURE__*/function () {
+  function PageLogic() {
+    _classCallCheck(this, PageLogic);
+    this.body = document.querySelector('body');
+  }
+  _createClass(PageLogic, [{
+    key: "init",
+    value: function init() {
+      this.bodyEventDelegation();
+    }
+  }, {
+    key: "bodyEventDelegation",
+    value: function bodyEventDelegation() {
+      var _this = this;
+      this.body.addEventListener('change', function (event) {
+        if (event.target.matches('#chk')) {
+          var label = event.target.nextElementSibling;
+          console.log(label);
+          _this.toggleThemeBtn(label);
+        }
+      });
+    }
+  }, {
+    key: "toggleThemeBtn",
+    value: function toggleThemeBtn(label) {
+      this.body.classList.toggle('light-mode');
+      if (label.title === 'Switch to dark mode') {
+        label.title = 'Switch to light mode';
+      } else {
+        label.title = 'Switch to dark mode';
+      }
+    }
+  }]);
+  return PageLogic;
+}();
+var pageLogic = new PageLogic();
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (pageLogic);
 
 /***/ }),
 
@@ -97,7 +155,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/*\r\nBasic CSS styles for a page layout with header, main content, and footer sections.\r\n*/\r\n:root {\r\n  --color-primary: #202123;\r\n  --color-secondary: #343641;\r\n  --color-tertiary: #444654;\r\n  --color-quaternary: #343541;\r\n  --font-color: #ffffff;\r\n}\r\n\r\nbody,\r\nhtml {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n  width: 100%;\r\n  height: 100%;\r\n}\r\n\r\n/* Container to wrap all the content */\r\n.container {\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: 100%;\r\n  height: 100%;\r\n  box-sizing: border-box;\r\n}\r\n\r\n/* Header basic setup */\r\n\r\nheader {\r\n  width: 100%;\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  box-sizing: border-box;\r\n  padding: 5px 10px;\r\n  background-color: var(--color-primary);\r\n}\r\n\r\nheader .logoContainer {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  gap: 5px;\r\n  font-size: larger;\r\n  color: var(--font-color);\r\n}\r\n\r\nheader img {\r\n  width: 50px;\r\n}\r\n\r\n/* Main basic setup */\r\n.contentContainer {\r\n  flex: 1 1 auto;\r\n  display: flex;\r\n}\r\n\r\n.contentContainer .sideBar {\r\n  flex: 1;\r\n  background-color: var(--color-secondary);\r\n}\r\n\r\n.contentContainer .content {\r\n  flex: 3;\r\n  background-color: var(--color-tertiary);\r\n}\r\n\r\n/* Footer basic setup */\r\nfooter {\r\n  text-align: center;\r\n  background-color: var(--color-primary);\r\n  color: var(--font-color);\r\n}\r\n\r\nfooter a {\r\n  text-decoration: none;\r\n  color: var(--font-color);\r\n  cursor: pointer;\r\n}\r\n\r\nfooter a:hover {\r\n  color: lightgrey;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/index.css"],"names":[],"mappings":"AAAA;;CAEC;AACD;EACE,wBAAwB;EACxB,0BAA0B;EAC1B,yBAAyB;EACzB,2BAA2B;EAC3B,qBAAqB;AACvB;;AAEA;;EAEE,SAAS;EACT,UAAU;EACV,sBAAsB;EACtB,WAAW;EACX,YAAY;AACd;;AAEA,sCAAsC;AACtC;EACE,aAAa;EACb,sBAAsB;EACtB,WAAW;EACX,YAAY;EACZ,sBAAsB;AACxB;;AAEA,uBAAuB;;AAEvB;EACE,WAAW;EACX,aAAa;EACb,8BAA8B;EAC9B,mBAAmB;EACnB,sBAAsB;EACtB,iBAAiB;EACjB,sCAAsC;AACxC;;AAEA;EACE,aAAa;EACb,uBAAuB;EACvB,mBAAmB;EACnB,QAAQ;EACR,iBAAiB;EACjB,wBAAwB;AAC1B;;AAEA;EACE,WAAW;AACb;;AAEA,qBAAqB;AACrB;EACE,cAAc;EACd,aAAa;AACf;;AAEA;EACE,OAAO;EACP,wCAAwC;AAC1C;;AAEA;EACE,OAAO;EACP,uCAAuC;AACzC;;AAEA,uBAAuB;AACvB;EACE,kBAAkB;EAClB,sCAAsC;EACtC,wBAAwB;AAC1B;;AAEA;EACE,qBAAqB;EACrB,wBAAwB;EACxB,eAAe;AACjB;;AAEA;EACE,gBAAgB;AAClB","sourcesContent":["/*\r\nBasic CSS styles for a page layout with header, main content, and footer sections.\r\n*/\r\n:root {\r\n  --color-primary: #202123;\r\n  --color-secondary: #343641;\r\n  --color-tertiary: #444654;\r\n  --color-quaternary: #343541;\r\n  --font-color: #ffffff;\r\n}\r\n\r\nbody,\r\nhtml {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n  width: 100%;\r\n  height: 100%;\r\n}\r\n\r\n/* Container to wrap all the content */\r\n.container {\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: 100%;\r\n  height: 100%;\r\n  box-sizing: border-box;\r\n}\r\n\r\n/* Header basic setup */\r\n\r\nheader {\r\n  width: 100%;\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  box-sizing: border-box;\r\n  padding: 5px 10px;\r\n  background-color: var(--color-primary);\r\n}\r\n\r\nheader .logoContainer {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  gap: 5px;\r\n  font-size: larger;\r\n  color: var(--font-color);\r\n}\r\n\r\nheader img {\r\n  width: 50px;\r\n}\r\n\r\n/* Main basic setup */\r\n.contentContainer {\r\n  flex: 1 1 auto;\r\n  display: flex;\r\n}\r\n\r\n.contentContainer .sideBar {\r\n  flex: 1;\r\n  background-color: var(--color-secondary);\r\n}\r\n\r\n.contentContainer .content {\r\n  flex: 3;\r\n  background-color: var(--color-tertiary);\r\n}\r\n\r\n/* Footer basic setup */\r\nfooter {\r\n  text-align: center;\r\n  background-color: var(--color-primary);\r\n  color: var(--font-color);\r\n}\r\n\r\nfooter a {\r\n  text-decoration: none;\r\n  color: var(--font-color);\r\n  cursor: pointer;\r\n}\r\n\r\nfooter a:hover {\r\n  color: lightgrey;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "/*\r\nBasic CSS styles for a page layout with header, main content, and footer sections.\r\n*/\r\n:root {\r\n  --color-primary: #202123;\r\n  --color-secondary: #343641;\r\n  --color-tertiary: #444654;\r\n  --color-quaternary: #343541;\r\n  --font-color: #ffffff;\r\n\r\n  /* Button dark/light mode colors */\r\n  --button-background:#89c7e7;\r\n  --button-circle:#f8ed62;\r\n}\r\n\r\n.light-mode {\r\n  --color-primary: #2f5061;\r\n  --color-secondary: #4297a0;\r\n  --color-tertiary: #f4eae6;\r\n  --color-quaternary: #f4eae6;\r\n  --font-color: #ffffff;\r\n\r\n  /* Button dark/light mode colors #ffa17f */\r\n  --button-background: #131862;\r\n  --button-circle: #546bab;\r\n}\r\n\r\nbody,\r\nhtml {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n  width: 100%;\r\n  height: 100%;\r\n}\r\n/* Setting the delay transition to smoothly toggle between dark and light mode */\r\nbody,\r\nheader,\r\n.sideBar,\r\n.content,\r\nfooter {\r\n  transition: 1s;\r\n}\r\n/* Container to wrap all the content */\r\n.container {\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: 100%;\r\n  height: 100%;\r\n  box-sizing: border-box;\r\n  transition: 1s;\r\n}\r\n\r\n/* Header basic setup */\r\n\r\nheader {\r\n  width: 100%;\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  box-sizing: border-box;\r\n  padding: 5px 10px;\r\n  background-color: var(--color-primary);\r\n}\r\n\r\nheader .logoContainer {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  gap: 5px;\r\n  font-size: larger;\r\n  color: var(--font-color);\r\n}\r\n\r\nheader img {\r\n  width: 50px;\r\n}\r\n\r\n/* Button dark/light settings */\r\n.checkbox {\r\n  opacity: 0;\r\n  position: absolute;\r\n}\r\n\r\n.label {\r\n  background-color: var(--button-background);\r\n  border-radius: 50px;\r\n  cursor: pointer;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n  padding: 5px;\r\n  position: relative;\r\n  height: 20px;\r\n  width: 50px;\r\n  transform: scale(1);\r\n  transition: 1s;\r\n}\r\n\r\n.label .ball {\r\n  background-color: var(--button-circle);\r\n  border-radius: 50%;\r\n  position: absolute;\r\n  border: 1px solid var(--button-background);\r\n  box-sizing: border-box;\r\n  left: 3px;\r\n  height: 25px;\r\n  width: 24px;\r\n  transform: translateX(0px);\r\n  transition: transform 0.5s linear;\r\n}\r\n\r\n.checkbox:checked + .label .ball {\r\n  transform: translateX(30px);\r\n}\r\n\r\n.fa-moon {\r\n  color: #546bab;\r\n}\r\n\r\n.fa-sun {\r\n  color: \t#f8ed62;\r\n}\r\n\r\n.visually-hidden {\r\n  display: none;\r\n}\r\n\r\n/* Main basic setup */\r\n.contentContainer {\r\n  flex: 1 1 auto;\r\n  display: flex;\r\n}\r\n\r\n.contentContainer .sideBar {\r\n  flex: 1;\r\n  background-color: var(--color-secondary);\r\n}\r\n\r\n.contentContainer .content {\r\n  flex: 3;\r\n  background-color: var(--color-tertiary);\r\n}\r\n\r\n/* Footer basic setup */\r\nfooter {\r\n  text-align: center;\r\n  background-color: var(--color-primary);\r\n  color: var(--font-color);\r\n}\r\n\r\nfooter a {\r\n  text-decoration: none;\r\n  color: var(--font-color);\r\n  cursor: pointer;\r\n}\r\n\r\nfooter a:hover {\r\n  color: lightgrey;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/index.css"],"names":[],"mappings":"AAAA;;CAEC;AACD;EACE,wBAAwB;EACxB,0BAA0B;EAC1B,yBAAyB;EACzB,2BAA2B;EAC3B,qBAAqB;;EAErB,kCAAkC;EAClC,2BAA2B;EAC3B,uBAAuB;AACzB;;AAEA;EACE,wBAAwB;EACxB,0BAA0B;EAC1B,yBAAyB;EACzB,2BAA2B;EAC3B,qBAAqB;;EAErB,0CAA0C;EAC1C,4BAA4B;EAC5B,wBAAwB;AAC1B;;AAEA;;EAEE,SAAS;EACT,UAAU;EACV,sBAAsB;EACtB,WAAW;EACX,YAAY;AACd;AACA,gFAAgF;AAChF;;;;;EAKE,cAAc;AAChB;AACA,sCAAsC;AACtC;EACE,aAAa;EACb,sBAAsB;EACtB,WAAW;EACX,YAAY;EACZ,sBAAsB;EACtB,cAAc;AAChB;;AAEA,uBAAuB;;AAEvB;EACE,WAAW;EACX,aAAa;EACb,8BAA8B;EAC9B,mBAAmB;EACnB,sBAAsB;EACtB,iBAAiB;EACjB,sCAAsC;AACxC;;AAEA;EACE,aAAa;EACb,uBAAuB;EACvB,mBAAmB;EACnB,QAAQ;EACR,iBAAiB;EACjB,wBAAwB;AAC1B;;AAEA;EACE,WAAW;AACb;;AAEA,+BAA+B;AAC/B;EACE,UAAU;EACV,kBAAkB;AACpB;;AAEA;EACE,0CAA0C;EAC1C,mBAAmB;EACnB,eAAe;EACf,aAAa;EACb,mBAAmB;EACnB,8BAA8B;EAC9B,YAAY;EACZ,kBAAkB;EAClB,YAAY;EACZ,WAAW;EACX,mBAAmB;EACnB,cAAc;AAChB;;AAEA;EACE,sCAAsC;EACtC,kBAAkB;EAClB,kBAAkB;EAClB,0CAA0C;EAC1C,sBAAsB;EACtB,SAAS;EACT,YAAY;EACZ,WAAW;EACX,0BAA0B;EAC1B,iCAAiC;AACnC;;AAEA;EACE,2BAA2B;AAC7B;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,eAAe;AACjB;;AAEA;EACE,aAAa;AACf;;AAEA,qBAAqB;AACrB;EACE,cAAc;EACd,aAAa;AACf;;AAEA;EACE,OAAO;EACP,wCAAwC;AAC1C;;AAEA;EACE,OAAO;EACP,uCAAuC;AACzC;;AAEA,uBAAuB;AACvB;EACE,kBAAkB;EAClB,sCAAsC;EACtC,wBAAwB;AAC1B;;AAEA;EACE,qBAAqB;EACrB,wBAAwB;EACxB,eAAe;AACjB;;AAEA;EACE,gBAAgB;AAClB","sourcesContent":["/*\r\nBasic CSS styles for a page layout with header, main content, and footer sections.\r\n*/\r\n:root {\r\n  --color-primary: #202123;\r\n  --color-secondary: #343641;\r\n  --color-tertiary: #444654;\r\n  --color-quaternary: #343541;\r\n  --font-color: #ffffff;\r\n\r\n  /* Button dark/light mode colors */\r\n  --button-background:#89c7e7;\r\n  --button-circle:#f8ed62;\r\n}\r\n\r\n.light-mode {\r\n  --color-primary: #2f5061;\r\n  --color-secondary: #4297a0;\r\n  --color-tertiary: #f4eae6;\r\n  --color-quaternary: #f4eae6;\r\n  --font-color: #ffffff;\r\n\r\n  /* Button dark/light mode colors #ffa17f */\r\n  --button-background: #131862;\r\n  --button-circle: #546bab;\r\n}\r\n\r\nbody,\r\nhtml {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n  width: 100%;\r\n  height: 100%;\r\n}\r\n/* Setting the delay transition to smoothly toggle between dark and light mode */\r\nbody,\r\nheader,\r\n.sideBar,\r\n.content,\r\nfooter {\r\n  transition: 1s;\r\n}\r\n/* Container to wrap all the content */\r\n.container {\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: 100%;\r\n  height: 100%;\r\n  box-sizing: border-box;\r\n  transition: 1s;\r\n}\r\n\r\n/* Header basic setup */\r\n\r\nheader {\r\n  width: 100%;\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  box-sizing: border-box;\r\n  padding: 5px 10px;\r\n  background-color: var(--color-primary);\r\n}\r\n\r\nheader .logoContainer {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  gap: 5px;\r\n  font-size: larger;\r\n  color: var(--font-color);\r\n}\r\n\r\nheader img {\r\n  width: 50px;\r\n}\r\n\r\n/* Button dark/light settings */\r\n.checkbox {\r\n  opacity: 0;\r\n  position: absolute;\r\n}\r\n\r\n.label {\r\n  background-color: var(--button-background);\r\n  border-radius: 50px;\r\n  cursor: pointer;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n  padding: 5px;\r\n  position: relative;\r\n  height: 20px;\r\n  width: 50px;\r\n  transform: scale(1);\r\n  transition: 1s;\r\n}\r\n\r\n.label .ball {\r\n  background-color: var(--button-circle);\r\n  border-radius: 50%;\r\n  position: absolute;\r\n  border: 1px solid var(--button-background);\r\n  box-sizing: border-box;\r\n  left: 3px;\r\n  height: 25px;\r\n  width: 24px;\r\n  transform: translateX(0px);\r\n  transition: transform 0.5s linear;\r\n}\r\n\r\n.checkbox:checked + .label .ball {\r\n  transform: translateX(30px);\r\n}\r\n\r\n.fa-moon {\r\n  color: #546bab;\r\n}\r\n\r\n.fa-sun {\r\n  color: \t#f8ed62;\r\n}\r\n\r\n.visually-hidden {\r\n  display: none;\r\n}\r\n\r\n/* Main basic setup */\r\n.contentContainer {\r\n  flex: 1 1 auto;\r\n  display: flex;\r\n}\r\n\r\n.contentContainer .sideBar {\r\n  flex: 1;\r\n  background-color: var(--color-secondary);\r\n}\r\n\r\n.contentContainer .content {\r\n  flex: 3;\r\n  background-color: var(--color-tertiary);\r\n}\r\n\r\n/* Footer basic setup */\r\nfooter {\r\n  text-align: center;\r\n  background-color: var(--color-primary);\r\n  color: var(--font-color);\r\n}\r\n\r\nfooter a {\r\n  text-decoration: none;\r\n  color: var(--font-color);\r\n  cursor: pointer;\r\n}\r\n\r\nfooter a:hover {\r\n  color: lightgrey;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -680,13 +738,16 @@ var __webpack_exports__ = {};
   \*************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _buildPage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./buildPage */ "./src/js/buildPage.js");
-/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css/index.css */ "./src/css/index.css");
+/* harmony import */ var _eventListeners__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./eventListeners */ "./src/js/eventListeners.js");
+/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../css/index.css */ "./src/css/index.css");
+
 
 // main css style page
 
 _buildPage__WEBPACK_IMPORTED_MODULE_0__["default"].init();
+_eventListeners__WEBPACK_IMPORTED_MODULE_1__["default"].init();
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle1210f435d9a0fb31c0f1.js.map
+//# sourceMappingURL=bundle9db85ced061db287dd9a.js.map
