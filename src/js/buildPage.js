@@ -34,7 +34,7 @@ class PageLayout {
      <img src=${noteIcon} alt="icon of a paper sheet simulating a to-do list"> To-do List
      </div>
      <div class="darkLightMode">
-       <button>Temporary</button>
+       <button class = "theme" aria-label = "Switch to light mode">Light Mode</button>
      </div>
     </header>`;
     this.container.insertAdjacentHTML('beforeend', header);

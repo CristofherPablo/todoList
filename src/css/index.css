@@ -7,6 +7,22 @@ Basic CSS styles for a page layout with header, main content, and footer section
   --color-tertiary: #444654;
   --color-quaternary: #343541;
   --font-color: #ffffff;
+
+  /* Button dark/light mode colors */
+  --button-background: #4297A0;
+  --button-hover: #81FFEA;
+}
+
+.light-mode {
+  --color-primary: #2F5061;
+  --color-secondary: #4297A0;
+  --color-tertiary: #f4eae6;
+  --color-quaternary: #f4eae6;
+  --font-color: #ffffff;
+
+  /* Button dark/light mode colors #ffa17f */
+  --button-background: #202123;
+  --button-hover: #4297A0;
 }
 
 body,
@@ -50,6 +66,25 @@ header .logoContainer {
 
 header img {
   width: 50px;
+}
+
+/* Button dark/light settings */
+.theme {
+  padding: 8px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  margin-right: 20px;
+  cursor: pointer;
+  transition: 1s;
+  /* Color variables to change with dark or light mode */
+  background-color: var(--button-background);
+  color: var(--font-color);
+}
+
+.theme:hover {
+  background-color: var(--button-hover);
+  color: var(--color-quaternary);
 }
 
 /* Main basic setup */
