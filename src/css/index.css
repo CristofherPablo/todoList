@@ -9,20 +9,20 @@ Basic CSS styles for a page layout with header, main content, and footer section
   --font-color: #ffffff;
 
   /* Button dark/light mode colors */
-  --button-background: #4297A0;
-  --button-hover: #81FFEA;
+  --button-background: #4297a0;
+  --button-hover: #81ffea;
 }
 
 .light-mode {
-  --color-primary: #2F5061;
-  --color-secondary: #4297A0;
+  --color-primary: #2f5061;
+  --color-secondary: #4297a0;
   --color-tertiary: #f4eae6;
   --color-quaternary: #f4eae6;
   --font-color: #ffffff;
 
   /* Button dark/light mode colors #ffa17f */
   --button-background: #202123;
-  --button-hover: #4297A0;
+  --button-hover: #4297a0;
 }
 
 body,
@@ -33,7 +33,14 @@ html {
   width: 100%;
   height: 100%;
 }
-
+/* Setting the delay transition to smoothly toggle between dark and light mode */
+body,
+header,
+.sideBar,
+.content,
+footer {
+  transition: 1s;
+}
 /* Container to wrap all the content */
 .container {
   display: flex;
@@ -41,6 +48,7 @@ html {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
+  transition: 1s;
 }
 
 /* Header basic setup */
