@@ -10,13 +10,20 @@ class PageLogic {
   bodyEventDelegation() {
     this.body.addEventListener('change', (event) => {
       if (event.target.matches('#chk')) {
-        this.toggleThemeBtn();
+        const label = event.target.nextElementSibling;
+        console.log(label);
+        this.toggleThemeBtn(label);
       }
     });
   }
 
-  toggleThemeBtn() {
+  toggleThemeBtn(label) {
     this.body.classList.toggle('light-mode');
+    if (label.title === 'Switch to dark mode') {
+      label.title = 'Switch to light mode';
+    } else {
+      label.title = 'Switch to dark mode';
+    }
   }
 }
 const pageLogic = new PageLogic();

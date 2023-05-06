@@ -35,8 +35,9 @@ class PageLayout {
      <img src=${noteIcon} alt="icon of a paper sheet simulating a to-do list"> To-do List
      </div>
      <div class="darkLightMode">
-     <input type="checkbox" class="checkbox" id="chk" />
-     <label for="chk" class="label">
+     <input type="checkbox" class="checkbox" id="chk"/>
+     <label for="chk" class="label" title="Switch to light mode">
+       <span class="visually-hidden">Toggle dark mode</span>
        <i class="fas fa-moon"></i>
        <i class="fas fa-sun"></i>
        <div class="ball"></div>
