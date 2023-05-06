@@ -68,5 +68,4 @@ class PageLayout {
 
 const pageLayout = new PageLayout();
 
-
 export default pageLayout;

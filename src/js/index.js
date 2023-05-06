@@ -1,7 +1,10 @@
 import pageLayout from './buildPage';
-import pageLogic from './pageLogic';
+import eventListenersSet from './eventListeners';
 // main css style page
 import '../css/index.css';
 
+
 pageLayout.init();
-pageLogic.init();
+eventListenersSet.init();
+
+
