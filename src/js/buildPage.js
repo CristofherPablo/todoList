@@ -2,6 +2,7 @@
 import listaIcon from '../assets/lista.png';
 import noteIcon from '../assets/greyNote.png';
 
+//render page basic layout
 class PageLayout {
   constructor() {
     this.body = document.querySelector('body');
@@ -63,5 +64,9 @@ class PageLayout {
   }
 }
 
+//basic page logic
+
 const pageLayout = new PageLayout();
+
+
 export default pageLayout;
