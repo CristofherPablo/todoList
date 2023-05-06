@@ -8,21 +8,15 @@ class PageLogic {
   }
 
   bodyEventDelegation() {
-    this.body.addEventListener('click', (event) => {
-      if (event.target.classList.contains('theme')) {
-        let themeBtn = event.target;
-        this.toggleThemeBtn(themeBtn);
+    this.body.addEventListener('change', (event) => {
+      if (event.target.matches('#chk')) {
+        this.toggleThemeBtn();
       }
     });
   }
 
-  toggleThemeBtn(themeBtn) {
+  toggleThemeBtn() {
     this.body.classList.toggle('light-mode');
-    if (themeBtn.innerText === 'Light Mode') {
-      themeBtn.innerText = 'Dark Mode';
-    } else {
-      themeBtn.innerText = 'Light Mode';
-    }
   }
 }
 const pageLogic = new PageLogic();

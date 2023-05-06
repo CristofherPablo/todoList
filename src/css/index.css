@@ -77,22 +77,48 @@ header img {
 }
 
 /* Button dark/light settings */
-.theme {
-  padding: 8px;
-  border: none;
-  border-radius: 10px;
-  font-weight: 600;
-  margin-right: 20px;
-  cursor: pointer;
-  transition: 1s;
-  /* Color variables to change with dark or light mode */
-  background-color: var(--button-background);
-  color: var(--font-color);
+.checkbox{
+  opacity: 0;
+  position: absolute;
 }
 
-.theme:hover {
-  background-color: var(--button-hover);
-  color: var(--color-quaternary);
+.label{
+  background-color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  height: 20px;
+  width: 50px;
+  transform: scale(1);
+}
+
+.label .ball{
+  background-color: orange;
+  border-radius: 50%;
+  position: absolute;
+  border: 1px solid black;
+  box-sizing: border-box;
+  left: 3px;
+  height: 25px;
+  width: 24px;
+  transform: translateX(0px);
+  transition: transform .2s linear;
+}
+
+.checkbox:checked + .label .ball{
+  transform: translateX(30px);
+}
+
+.fa-moon{
+  color: lightblue;
+}
+
+.fa-sun{
+  color: lightyellow;
 }
 
 /* Main basic setup */

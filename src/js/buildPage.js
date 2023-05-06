@@ -35,7 +35,12 @@ class PageLayout {
      <img src=${noteIcon} alt="icon of a paper sheet simulating a to-do list"> To-do List
      </div>
      <div class="darkLightMode">
-       <button class = "theme" aria-label = "Switch to light mode">Light Mode</button>
+     <input type="checkbox" class="checkbox" id="chk" />
+     <label for="chk" class="label">
+       <i class="fas fa-moon"></i>
+       <i class="fas fa-sun"></i>
+       <div class="ball"></div>
+     </label>
      </div>
     </header>`;
     this.container.insertAdjacentHTML('beforeend', header);
