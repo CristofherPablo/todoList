@@ -28,6 +28,12 @@
     background-color: var(--color-tertiary);
 }
 
+.sideBar .addComponent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 /* make a click effect */
 .sideBar li:active {
     background-color: #ccc; 

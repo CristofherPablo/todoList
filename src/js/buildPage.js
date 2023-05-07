@@ -58,13 +58,19 @@ class PageLayout {
             aria-label="navBar to navigate among tasks"
             >
               <ul>
-                <li class="navOptions" data-category="all">
-                  <i class="fa fa-list"></i>
-                  <span class="visually-hidden">Show All Tasks</span>All Tasks
+                <li class="navOptions addComponent" data-category="all">
+                  <div> 
+                    <i class="fa fa-list"></i>
+                    <span class="visually-hidden">Show All Tasks</span>All Tasks
+                  </div>
+                  <i class="fa fa-plus"></i>
                 </li>
-                <li class="navOptions" data-category="today">
-                  <i class="fa fa-calendar"></i>
-                  <span class="visually-hidden">Show Tasks Due Today</span>Due to Today
+                <li class="navOptions addComponent" data-category="today">
+                  <div>
+                    <i class="fa fa-calendar"></i>
+                    <span class="visually-hidden">Show Tasks Due Today</span>Due to Today
+                  </div>
+                  <i class="fa fa-plus"></i>
                 </li>
                 <li class="navOptions" data-category="pastDue">
                   <i class="fa fa-file-excel"></i>
