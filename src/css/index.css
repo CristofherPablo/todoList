@@ -7,6 +7,7 @@ Basic CSS styles for a page layout with header, main content, and footer section
   --color-tertiary: #444654;
   --color-quaternary: #343541;
   --font-color: #ffffff;
+  --font-color-table:#ffffff; 
 
   /* Button dark/light mode colors
   --button-background:#89c7e7;
@@ -22,6 +23,7 @@ Basic CSS styles for a page layout with header, main content, and footer section
   --color-tertiary: #f4eae6;
   --color-quaternary: #f4eae6;
   --font-color: #ffffff;
+  --font-color-table:#000000; 
 
   /* Button dark/light mode colors #ffa17f */
   --button-background: #131862;

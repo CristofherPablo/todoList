@@ -94,7 +94,7 @@ class PageLayout {
             <h1>All Tasks</h1>
             <div class="tasksTable"></div>
           </div>
-          <div>
+          <div class="buttonEraser">
             <button role="Button to erase all database">Erase All Tasks</button>
           </div>
        </div>
