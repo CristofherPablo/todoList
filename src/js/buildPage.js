@@ -89,7 +89,15 @@ class PageLayout {
            </div>
          </div>
        </div>
-       <div class="content"></div>
+       <div class="content">
+          <div class="tasksDisplay" role="Display the selected group of tasks">
+            <h1>All Tasks</h1>
+            <div class="tasksTable"></div>
+          </div>
+          <div>
+            <button role="Button to erase all database">Erase All Tasks</button>
+          </div>
+       </div>
      </section>`;
      //<i class="fa fa-folder"></i> use it in the new menu
     this.container.insertAdjacentHTML('beforeend', main);
