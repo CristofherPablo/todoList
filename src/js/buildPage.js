@@ -49,7 +49,45 @@ class PageLayout {
 
   renderMainSection() {
     const main = `<section class="contentContainer">
-       <div class="sideBar"></div>
+       <div class="sideBar">
+       <!-- Main menu of the page -->
+          <div class="menuDefault">
+            <nav
+            class="mainNavBar"
+            role="navigation"
+            aria-label="navBar to navigate among tasks"
+            >
+              <ul>
+                <li class="navOptions" data-category="all">
+                  <i class="fa fa-list"></i>
+                  <span class="visually-hidden">Show All Tasks</span>All Tasks
+                </li>
+                <li class="navOptions" data-category="today">
+                  <i class="fa fa-calendar"></i>
+                  <span class="visually-hidden">Show Tasks Due Today</span>Due to Today
+                </li>
+                <li class="navOptions" data-category="pastDue">
+                  <i class="fa fa-file-excel"></i>
+                  <span class="visually-hidden">Show Past-due Tasks</span>Past-due tasks
+                </li>
+              </ul>
+            </nav>
+         </div>
+         <!-- container to render the menu -->
+         <div class="containerDynamicMenu">
+           <div class="addFolder"
+           role="add new folder">
+             <ul>
+               <li>
+               <i class="fa fa-folder"></i>
+               <span class="visually-hidden">button to Add A New Folder</span>Add A New Folder</li>
+             </ul>
+           </div>
+           <div class="displayFolder" role="Nav to display the new folders created">
+             <ul></ul>
+           </div>
+         </div>
+       </div>
        <div class="content"></div>
      </section>`;
     this.container.insertAdjacentHTML('beforeend', main);
