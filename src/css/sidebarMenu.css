@@ -1,0 +1,65 @@
+/*Navbar from sideBar set up*/
+
+.sideBar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--font-color);
+    font-size: 1.1rem;
+    box-sizing: border-box;
+}
+
+.sideBar ul{
+    padding: 0;
+    margin: 0;
+}
+
+.sideBar li{
+    list-style: none;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.sideBar li:hover{
+    background-color: var(--color-tertiary);
+}
+
+/* make a click effect */
+.sideBar li:active {
+    background-color: #ccc; 
+    color: #fff; 
+  }
+
+.sideBar li i{
+    padding: 0px 10px;
+}
+
+.menuDefault{
+    border-bottom: 1px solid white;
+    width: 80%;
+    box-sizing: border-box;
+    padding: 25px 0px 25px 0px;
+}
+
+.containerDynamicMenu{
+    flex: 3 1 auto;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+.containerDynamicMenu .displayFolder{
+    flex: 1;
+    margin-top: 20px !important;
+    width: 80%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    max-height: 240px;
+}

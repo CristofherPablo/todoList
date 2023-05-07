@@ -78,18 +78,20 @@ class PageLayout {
            <div class="addFolder"
            role="add new folder">
              <ul>
+                <h1>Projects</h1>
                <li>
-               <i class="fa fa-folder"></i>
+               <i class="fa fa-plus"></i>
                <span class="visually-hidden">button to Add A New Folder</span>Add A New Folder</li>
              </ul>
            </div>
            <div class="displayFolder" role="Nav to display the new folders created">
-             <ul></ul>
+             <ul> </ul>
            </div>
          </div>
        </div>
        <div class="content"></div>
      </section>`;
+     //<i class="fa fa-folder"></i> use it in the new menu
     this.container.insertAdjacentHTML('beforeend', main);
   }
 

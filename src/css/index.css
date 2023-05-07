@@ -8,9 +8,12 @@ Basic CSS styles for a page layout with header, main content, and footer section
   --color-quaternary: #343541;
   --font-color: #ffffff;
 
-  /* Button dark/light mode colors */
+  /* Button dark/light mode colors
   --button-background:#89c7e7;
   --button-circle:#f8ed62;
+ */
+  --button-background:#444654;
+  --button-circle:#fffec8;
 }
 
 .light-mode {
@@ -119,7 +122,7 @@ header img {
 }
 
 .fa-sun {
-  color: 	#f8ed62;
+  color: 	#fffec8;
 }
 
 /*Class to hide all the attributes to help the app be more accessible for screen readers */
