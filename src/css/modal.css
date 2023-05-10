@@ -1,32 +1,68 @@
 /* Basic Modal specifications */
-.modal{
-    position: absolute;
-    top: 20%;
-    z-index: 2;
+.modal {
+  position: absolute;
+  top: 20%;
+  z-index: 2;
 
-    box-sizing: border-box;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: var(--color-tertiary);
-    
+  box-sizing: border-box;
+  border: 1px solid var(--color-tertiary);
+  border-radius: 10px;
+  background-color: var(--color-tertiary);
 }
 /* specifications to Create a Task modal */
 
-.modal-createHeader{
-    display: flex;
+.modal-createHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--font-color);
+  padding: 10px;
+  background-color: var(--color-primary);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
+
+.modal-createHeader h1 {
+  margin: 0;
+}
+
+.modal-createHeader button {
+  border: none;
+  background-color: transparent;
+  color: var(--font-color);
+  font-size: 1.3rem;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.modal-createHeader button:hover {
+  color: var(--color-tertiary);
+}
+
+.modal-createHeader button:active {
+  color: var(--color-secondary);
+}
+
+/* content input */
+
+.modal-createContent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
 
 /* Overlay specifications */
-.overlay{
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-    backdrop-filter: blur(3px);
-    z-index: 1;
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 1;
 }
-

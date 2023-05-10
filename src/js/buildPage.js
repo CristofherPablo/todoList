@@ -131,8 +131,8 @@ class PageLayout {
       <button>X</button>
     </div>
     <div class="modal-createContent">
-      <input type="text" />
-      <input type="text" />
+      <input type="text" maxlength="20"/>
+      <textarea rows="6" cols="50" /></textarea>
     </div>
     <div class="modal-createFooter">
       <div class="modal-footerBtnContainer">
