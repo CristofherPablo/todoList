@@ -131,23 +131,23 @@ class PageLayout {
       <button>X</button>
     </div>
     <div class="modal-createContent">
-      <input type="text" maxlength="20"/>
-      <textarea rows="6" cols="50" /></textarea>
+      <input type="text" maxlength="20" placeholder="Title"/>
+      <textarea rows="6" cols="50" placeholder="Details" /></textarea>
     </div>
     <div class="modal-createFooter">
       <div class="modal-footerBtnContainer">
-        <div>
+        <div class="date-modalFooter">
           <p>Due Date:</p>
           <input type="date" name="calendar" id="dueDate" />
         </div>
-        <div>
+        <div class="priority-modalFooter">
           <p>Priority: </p>
           <button class="lowBtn">Low</button>
           <button class="mediumBtn">Medium</button>
           <button class="highBtn">High</button>
         </div>
       </div>
-      <button class="modal-createSubmitBtn">Add Task</button>
+      <button type="submit" class="modal-createSubmitBtn">Add Task</button>
     </div>
   </section>
     <div class="overlay hidden"></div>`;

@@ -49,9 +49,130 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 10px;
+    padding: 15px;
+}
+.modal-createContent input,
+.modal-createContent textarea{
+  box-sizing: border-box;
+  padding: 5px;
+  background-color: var(--color-tertiary);
+  border: none;
+  color: var(--font-color);
 }
 
+.modal-createContent input:focus,
+.modal-createContent textarea:focus{
+  outline: none;
+}
+.modal-createContent input::placeholder,
+.modal-createContent textarea::placeholder{
+  color: var(--font-color);
+}
+
+.modal-createContent input{
+  font-size: 1.5rem;
+}
+
+.modal-createContent textarea{
+  font-size: 1.2rem;
+}
+
+/* Create Footer modal setup */
+.modal-createFooter{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 15px 15px 15px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1.3rem;
+}
+/* Date input setup */
+.modal-createFooter .date-modalFooter{
+  display: flex;
+  align-items: center;
+  color: var(--font-color);
+} 
+
+.modal-createFooter .date-modalFooter input[type='date']{
+  font-size: 1.2rem;
+  border-radius: 10px;
+  border: 1px solid #4dab9e;
+  padding: 3px;
+  margin-left: 10px;
+  background-color: var(--color-tertiary);
+  color: #4dab9e;
+  text-align: center;
+  width: 150px;
+}
+
+.modal-createFooter .date-modalFooter input[type='date']::-webkit-calendar-picker-indicator{
+  text-align: center;
+}
+
+.priority-modalFooter{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: var(--font-color);
+}
+
+.priority-modalFooter button{
+  font-size: 1.2rem;
+  color: var(--font-color);
+  background-color: var(--color-tertiary);
+  padding: 3px 10px;
+  border: none;
+  border-radius:10px;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.priority-modalFooter button:active{
+  background-color: white;
+  color: aliceblue;
+}
+
+.lowBtn{
+  border: 1px solid yellow !important;
+  color: yellow !important;
+}
+
+.lowBtn:hover{
+  background-color: yellow;
+  color: black !important;
+}
+.mediumBtn{
+  border: 1px solid greenyellow !important;
+  color: greenyellow !important;
+}
+
+.mediumBtn:hover{
+  background-color: greenyellow;
+  color: black !important;
+}
+.highBtn{
+  border: 1px solid red !important;
+  color: red !important;
+}
+
+.highBtn:hover{
+  background-color: red;
+  color: black !important;
+}
+
+/* submit button */
+
+.modal-createSubmitBtn{
+  margin-top: auto;
+  font-size: 1.2rem;
+  color: var(--font-color);
+  border:1px solid var(--color-primary);
+  border-radius: 10px;
+  background-color: transparent;
+  padding: 5px 10px;
+
+}
 
 /* Overlay specifications */
 .overlay {
