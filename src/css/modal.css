@@ -1,9 +1,22 @@
+/* Basic Modal specifications */
 .modal{
     position: absolute;
     top: 20%;
     z-index: 2;
+
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--color-tertiary);
+    
+}
+/* specifications to Create a Task modal */
+
+.modal-createHeader{
+    display: flex;
 }
 
+/* Overlay specifications */
 .overlay{
     position: fixed;
     top: 0;
@@ -17,6 +30,3 @@
     z-index: 1;
 }
 
-.hidden{
-    display: none;
-}

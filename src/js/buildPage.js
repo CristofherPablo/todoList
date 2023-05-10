@@ -125,7 +125,31 @@ class PageLayout {
   }
 
   renderModal(){
-    const modal = `<section class="modal hidden"> <h1> Just a test </h1></section>
+    const modal = `<section class="modal hidden">
+    <div class="modal-createHeader">
+      <h1>Create a new Task</h1>
+      <button>X</button>
+    </div>
+    <div class="modal-createContent">
+      <input type="text" />
+      <input type="text" />
+    </div>
+    <div class="modal-createFooter">
+      <div class="modal-footerBtnContainer">
+        <div>
+          <p>Due Date:</p>
+          <input type="date" name="calendar" id="dueDate" />
+        </div>
+        <div>
+          <p>Priority: </p>
+          <button class="lowBtn">Low</button>
+          <button class="mediumBtn">Medium</button>
+          <button class="highBtn">High</button>
+        </div>
+      </div>
+      <button class="modal-createSubmitBtn">Add Task</button>
+    </div>
+  </section>
     <div class="overlay hidden"></div>`;
     this.body.insertAdjacentHTML('beforeend', modal);
   }
