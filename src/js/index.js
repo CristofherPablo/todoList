@@ -4,6 +4,7 @@ import eventListenersSet from './eventListeners';
 import '../css/index.css';
 import '../css/sidebarMenu.css';
 import '../css/tasksTable.css';
+import '../css/modal.css';
 
 
 pageLayout.init();

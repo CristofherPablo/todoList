@@ -26,6 +26,7 @@ class PageLayout {
     this.renderHeader();
     this.renderMainSection();
     this.renderFooter();
+    this.renderModal();
   }
 
   renderHeader() {
@@ -121,6 +122,12 @@ class PageLayout {
     >
     </p></footer>`;
     this.container.insertAdjacentHTML('beforeend', footer);
+  }
+
+  renderModal(){
+    const modal = `<section class="modal hidden"> <h1> Just a test </h1></section>
+    <div class="overlay hidden"></div>`;
+    this.body.insertAdjacentHTML('beforeend', modal);
   }
 }
 
