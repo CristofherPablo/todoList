@@ -174,18 +174,10 @@ class PageLayout {
     </section>
     <section class="displayDetails modal hidden">
       <div class="displayDetailsHeader">
-      <h3>Example</h3>
+      <h3></h3>
       <button class="closeDisplayDetails">X</button>
       </div>
       <div class="displayContent">
-        <p>Information: Displaying</p>
-        <p>Information: Displaying</p>
-        <p>Information: Displaying</p>
-        <p>Information: Displaying</p>
-        <p>Information: Displaying</p>
-        <p>Information: Displaying</p>
-        <p>Information: Displaying</p>
-        <p>Information: Displaying</p>
       </div>
     </section>
     <div class="overlay hidden"></div>`;
