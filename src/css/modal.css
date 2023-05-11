@@ -46,13 +46,13 @@
 /* content input */
 
 .modal-createContent {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
 }
 .modal-createContent input,
-.modal-createContent textarea{
+.modal-createContent textarea {
   box-sizing: border-box;
   padding: 5px;
   background-color: var(--color-tertiary);
@@ -61,24 +61,24 @@
 }
 
 .modal-createContent input:focus,
-.modal-createContent textarea:focus{
+.modal-createContent textarea:focus {
   outline: none;
 }
 .modal-createContent input::placeholder,
-.modal-createContent textarea::placeholder{
+.modal-createContent textarea::placeholder {
   color: var(--font-color-table);
 }
 
-.modal-createContent input{
+.modal-createContent input {
   font-size: 1.5rem;
 }
 
-.modal-createContent textarea{
+.modal-createContent textarea {
   font-size: 1.2rem;
 }
 
 /* Create Footer modal setup */
-.modal-createFooter{
+.modal-createFooter {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -88,13 +88,13 @@
   font-size: 1.3rem;
 }
 /* Date input setup */
-.modal-createFooter .date-modalFooter{
+.modal-createFooter .date-modalFooter {
   display: flex;
   align-items: center;
   color: var(--font-color-table);
-} 
+}
 
-.modal-createFooter .date-modalFooter input[type='date']{
+.modal-createFooter .date-modalFooter input[type='date'] {
   font-size: 1.2rem;
   border-radius: 10px;
   border: 1px solid #4dab9e;
@@ -106,83 +106,179 @@
   width: 150px;
 }
 
-.modal-createFooter .date-modalFooter input[type='date']::-webkit-calendar-picker-indicator{
+.modal-createFooter
+  .date-modalFooter
+  input[type='date']::-webkit-calendar-picker-indicator {
   text-align: center;
 }
 
-.priority-modalFooter{
+/* Priority buttons */
+.priority-modalFooter {
   display: flex;
   gap: 10px;
   align-items: center;
   color: var(--font-color-table);
 }
 
-.priority-modalFooter button{
+.priority-modalFooter button {
   font-size: 1.2rem;
   color: var(--font-color-table);
   background-color: var(--color-tertiary);
   padding: 3px 10px;
   border: none;
-  border-radius:10px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: .5s;
+  transition: 0.5s;
 }
 
-.priority-modalFooter button:active{
+.priority-modalFooter button:active {
   background-color: white;
   color: aliceblue;
 }
 
-.lowBtn{
+.lowBtn {
   border: 1px solid orange !important;
   color: orange !important;
 }
 
-.lowBtn:hover{
+.lowBtn:hover {
   background-color: orange;
   color: black !important;
 }
-.mediumBtn{
+.mediumBtn {
   border: 1px solid #05ef05 !important;
   color: #05ef05 !important;
 }
 
-.mediumBtn:hover{
+.mediumBtn:hover {
   background-color: #05ef05;
   color: black !important;
 }
-.highBtn{
+.highBtn {
   border: 1px solid red !important;
   color: red !important;
 }
 
-.highBtn:hover{
-  background-color: red;
+.highBtn:hover {
+  background-color: #ff0000;
   color: black !important;
 }
 
 /* submit button */
 
-.modal-createSubmitBtn{
+.modal-createSubmitBtn {
   margin-top: auto;
   font-size: 1.2rem;
   color: var(--font-color-table);
-  border:1px solid var(--color-primary);
+  border: 1px solid var(--color-primary);
   border-radius: 10px;
   background-color: transparent;
   padding: 5px 10px;
   transition: 1s;
 }
 
-.modal-createSubmitBtn:hover{
+.modal-createSubmitBtn:hover {
   background-color: var(--color-primary);
   color: var(--font-color);
 }
 
-.modal-createSubmitBtn:active{
+.modal-createSubmitBtn:active {
   background-color: white;
-  
 }
+
+/* Modal to create a New Folder to the system */
+.addFolderModal {
+  width: 400px;
+  height: 200px;
+  box-sizing: border-box;
+  color: var(--font-color-table);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+  left: 50%;
+  top: 50%;
+  margin-left: -200px;
+  margin-top: -100px;
+}
+
+.addFolderModal .addFolderContainer{
+  height: 100%;
+  
+  box-sizing: border-box;
+}
+
+/* Header of the new folder modal */
+.addFolderModal .addFolderHeader {
+  background-color: var(--color-primary);
+  padding: 5px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.addFolderModal .addFolderHeader h1 {
+  margin: 10px;
+}
+
+/* Content of the new folder modal */
+.addFolderModal .addFolderContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  height: calc(100% - 57px); /* Adjusted height */
+  box-sizing: border-box;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.addFolderContent input {
+  font-size: 1.5rem;
+  border: none;
+  background-color: transparent;
+  color: var(--font-color-table);
+}
+
+.addFolderContent input:focus {
+  outline: none;
+}
+
+.addFolderContent input::placeholder {
+  color: var(--font-color);
+}
+
+.addFolderContent div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addFolderContent .submitFolder,
+.addFolderContent .cancelFolder{
+  background-color: transparent;
+  font-size: medium ;
+  border: none;
+  margin: 0px 10px;
+  padding: 5px 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.addFolderContent .submitFolder:active,
+.addFolderContent .cancelFolder:active{
+  background-color: var(--color-secondary);
+  color: var(--font-color-table);
+  border: 2px solid var(--color-primary);
+}
+
+.addFolderContent .submitFolder{
+  border: 2px solid #3ea6eb;
+  color: #3ea6eb;
+}
+
+.addFolderContent .cancelFolder{
+  border: 2px solid #ff0000;
+  color: #ff0000;
+}
+
 
 /* Overlay specifications */
 .overlay {

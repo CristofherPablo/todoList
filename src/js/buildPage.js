@@ -106,7 +106,7 @@ class PageLayout {
           </div>
        </div>
      </section>`;
-     //<i class="fa fa-folder"></i> use it in the new menu
+    //<i class="fa fa-folder"></i> use it in the new menu
     this.container.insertAdjacentHTML('beforeend', main);
   }
 
@@ -124,7 +124,7 @@ class PageLayout {
     this.container.insertAdjacentHTML('beforeend', footer);
   }
 
-  renderModal(){
+  renderModal() {
     const modal = `<section class="modal hidden">
     <div class="modal-createHeader">
       <h1>Create a new Task</h1>
@@ -150,6 +150,20 @@ class PageLayout {
       <button type="submit" class="modal-createSubmitBtn">Add Task</button>
     </div>
   </section>
+  <section class="modal addFolderModal hidden">
+      <div class="addFolderContainer">
+        <div class="addFolderHeader">
+          <h1>New Folder</h1>
+        </div>
+        <div class="addFolderContent">
+          <input type="text" placeholder="Title" maxlength="33">
+          <div>
+            <button class="submitFolder" type="submit">Add Folder</button>
+            <button class="cancelFolder">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </section>
     <div class="overlay hidden"></div>`;
     this.body.insertAdjacentHTML('beforeend', modal);
   }
