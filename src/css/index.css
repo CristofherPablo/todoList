@@ -171,3 +171,8 @@ footer a {
 footer a:hover {
   color: lightgrey;
 }
+
+/* hidden class*/
+.hidden{
+  display: none;
+}

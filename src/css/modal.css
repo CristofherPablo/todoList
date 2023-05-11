@@ -57,7 +57,7 @@
   padding: 5px;
   background-color: var(--color-tertiary);
   border: none;
-  color: var(--font-color);
+  color: var(--font-color-table);
 }
 
 .modal-createContent input:focus,
@@ -66,7 +66,7 @@
 }
 .modal-createContent input::placeholder,
 .modal-createContent textarea::placeholder{
-  color: var(--font-color);
+  color: var(--font-color-table);
 }
 
 .modal-createContent input{
@@ -91,7 +91,7 @@
 .modal-createFooter .date-modalFooter{
   display: flex;
   align-items: center;
-  color: var(--font-color);
+  color: var(--font-color-table);
 } 
 
 .modal-createFooter .date-modalFooter input[type='date']{
@@ -114,12 +114,12 @@
   display: flex;
   gap: 10px;
   align-items: center;
-  color: var(--font-color);
+  color: var(--font-color-table);
 }
 
 .priority-modalFooter button{
   font-size: 1.2rem;
-  color: var(--font-color);
+  color: var(--font-color-table);
   background-color: var(--color-tertiary);
   padding: 3px 10px;
   border: none;
@@ -134,21 +134,21 @@
 }
 
 .lowBtn{
-  border: 1px solid yellow !important;
-  color: yellow !important;
+  border: 1px solid orange !important;
+  color: orange !important;
 }
 
 .lowBtn:hover{
-  background-color: yellow;
+  background-color: orange;
   color: black !important;
 }
 .mediumBtn{
-  border: 1px solid greenyellow !important;
-  color: greenyellow !important;
+  border: 1px solid #05ef05 !important;
+  color: #05ef05 !important;
 }
 
 .mediumBtn:hover{
-  background-color: greenyellow;
+  background-color: #05ef05;
   color: black !important;
 }
 .highBtn{
@@ -166,12 +166,22 @@
 .modal-createSubmitBtn{
   margin-top: auto;
   font-size: 1.2rem;
-  color: var(--font-color);
+  color: var(--font-color-table);
   border:1px solid var(--color-primary);
   border-radius: 10px;
   background-color: transparent;
   padding: 5px 10px;
+  transition: 1s;
+}
 
+.modal-createSubmitBtn:hover{
+  background-color: var(--color-primary);
+  color: var(--font-color);
+}
+
+.modal-createSubmitBtn:active{
+  background-color: white;
+  
 }
 
 /* Overlay specifications */
