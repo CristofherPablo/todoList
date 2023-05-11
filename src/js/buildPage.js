@@ -164,6 +164,14 @@ class PageLayout {
         </div>
       </div>
     </section>
+    <section class="modal alert">
+      <h1>Alert</h1>
+      <p>All the data will be permanently erased. Do you want to proceed?</p>
+      <div class="alertBtnContainer">
+        <button id="yes">Yes</button>
+        <button id="no">No</button>
+      </div>
+    </section>
     <div class="overlay hidden"></div>`;
     this.body.insertAdjacentHTML('beforeend', modal);
   }
