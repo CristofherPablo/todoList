@@ -172,8 +172,11 @@ class PageLayout {
         <button id="no">No</button>
       </div>
     </section>
-    <section class="displayDetails modal">
-      <h1>Example</h1>
+    <section class="displayDetails modal hidden">
+      <div class="displayDetailsHeader">
+      <h3>Example</h3>
+      <button class="closeDisplayDetails">X</button>
+      </div>
       <div class="displayContent">
         <p>Information: Displaying</p>
         <p>Information: Displaying</p>

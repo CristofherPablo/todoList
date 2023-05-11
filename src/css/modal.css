@@ -362,9 +362,11 @@
   min-height: 220px;
   max-height: 300px;
   box-sizing: border-box;
-  color: var(--font-color-table);
+  color: var(--font-color);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   font-size: 1.2rem;
+  padding-bottom: 10px;
+  transition: 1s;
 
   left: 50%;
   top: 50%;
@@ -372,9 +374,57 @@
   margin-top: -100px;
 }
 
+/* Header from the display modal */
+.displayDetailsHeader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: var(--color-primary);
+  margin: -1px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transition: 1s;
+}
+
+.displayDetailsHeader h3{
+  margin: 0;
+}
+
+.displayDetailsHeader button{
+  background-color: transparent;
+  font-size: larger;
+  font-weight: bold;
+  border: none;
+  color: #ff0000;
+  cursor: pointer;
+}
+
+.displayDetailsHeader button:active{
+  color: #ff00005a;
+}
+
 .displayDetails .displayContent{
   overflow: auto;
   max-height: 180px;
+  padding: 10px;
+  color: var(--font-color-table);
+  transition: 1s;
+}
+
+/* Styling the scrollbar from display section */
+.displayDetails .displayContent::-webkit-scrollbar {
+  width: 10px;
+}
+
+.displayDetails .displayContent::-webkit-scrollbar-track {
+  background-color: #e4e4e4;
+  border-radius: 100px;
+}
+
+.displayDetails .displayContent::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border-radius: 100px;
 }
 /* Overlay specifications */
 .overlay {
