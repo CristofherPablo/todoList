@@ -86,7 +86,7 @@ class PageLayout {
            role="add new folder">
              <ul>
                 <h1>Projects</h1>
-               <li>
+               <li class="addFolderBtn">
                <i class="fa fa-plus"></i>
                <span class="visually-hidden">button to Add A New Folder</span>Add A New Folder</li>
              </ul>

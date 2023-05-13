@@ -23,6 +23,8 @@ class PageLogic {
       } else if (event.target.matches('#eraseAll')) {
         this.openEraseAlert();
         return;
+      } else if (event.target.matches('.addFolderBtn')) {
+        this.openAddFolderModal();
       }
     });
   }
@@ -37,6 +39,12 @@ class PageLogic {
     const alert = document.querySelector('.alert');
     alert.classList.add('show');
     this.toggleOverlay();
+  }
+
+  openAddFolderModal() {
+    const addFolder = document.querySelector('.addFolderModal');
+    addFolder.classList.add('show');
+    
   }
 
   toggleOverlay() {

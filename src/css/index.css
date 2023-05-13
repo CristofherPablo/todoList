@@ -173,7 +173,9 @@ footer a:hover {
 }
 
 /* hidden class*/
-
+.show{
+  opacity: 1;
+}
 .overlay.show{
   opacity: 1;
   pointer-events: auto;
@@ -182,3 +184,4 @@ footer a:hover {
 .modal.show{
   opacity: 1;
 }
+
