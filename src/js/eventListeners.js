@@ -11,10 +11,37 @@ class PageLogic {
     this.body.addEventListener('change', (event) => {
       if (event.target.matches('#chk')) {
         const label = event.target.nextElementSibling;
-        console.log(label);
         this.toggleThemeBtn(label);
+        return;
       }
     });
+    this.body.addEventListener('click', (evet) => {
+      if (event.target.matches('.addPlus')) {
+        const folderName = event.target.dataset.name;
+        this.openAddModal(folderName);
+        return;
+      } else if (event.target.matches('#eraseAll')) {
+        this.openEraseAlert();
+        return;
+      }
+    });
+  }
+
+  openAddModal(folderName) {
+    const folderTarget = document.querySelector('#addTask');
+    folderTarget.classList.add('show');
+    this.toggleOverlay();
+  }
+
+  openEraseAlert() {
+    const alert = document.querySelector('.alert');
+    alert.classList.add('show');
+    this.toggleOverlay();
+  }
+
+  toggleOverlay() {
+    const overlay = document.querySelector('.overlay');
+    overlay.classList.toggle('show');
   }
 
   toggleThemeBtn(label) {

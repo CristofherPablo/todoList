@@ -9,6 +9,9 @@
   border-radius: 10px;
   background-color: var(--color-tertiary);
   transition: 1s;
+
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 /* specifications to Create a Task modal */
 
@@ -448,4 +451,8 @@
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(3px);
   z-index: 1;
+
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
 }

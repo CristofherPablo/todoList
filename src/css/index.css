@@ -173,6 +173,12 @@ footer a:hover {
 }
 
 /* hidden class*/
-.hidden{
-  display: none;
+
+.overlay.show{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal.show{
+  opacity: 1;
 }

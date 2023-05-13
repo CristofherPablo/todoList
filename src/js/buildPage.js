@@ -64,14 +64,14 @@ class PageLayout {
                     <i class="fa fa-list"></i>
                     <span class="visually-hidden">Show All Tasks</span>All Tasks
                   </div>
-                  <i class="fa fa-plus"></i>
+                  <i class="fa fa-plus addPlus" data-name="All Tasks"></i>
                 </li>
                 <li class="navOptions addComponent" data-category="today">
                   <div>
                     <i class="fa fa-calendar"></i>
                     <span class="visually-hidden">Show Tasks Due Today</span>Due to Today
                   </div>
-                  <i class="fa fa-plus"></i>
+                  <i class="fa fa-plus addPlus" data-name="Due to Today"></i>
                 </li>
                 <li class="navOptions" data-category="pastDue">
                   <i class="fa fa-file-excel"></i>
@@ -102,7 +102,7 @@ class PageLayout {
             <div class="tasksTable"></div>
           </div>
           <div class="buttonEraser">
-            <button role="Button to erase all database">Erase All Tasks</button>
+            <button id="eraseAll" role="Button to erase all database">Erase All Tasks</button>
           </div>
        </div>
      </section>`;
@@ -125,7 +125,7 @@ class PageLayout {
   }
 
   renderModal() {
-    const modal = `<section class="modal hidden">
+    const modal = `<section class="modal" id="addTask">
     <div class="modal-createHeader">
       <h1>Create a new Task</h1>
       <button>X</button>
@@ -150,7 +150,7 @@ class PageLayout {
       <button type="submit" class="modal-createSubmitBtn">Add Task</button>
     </div>
   </section>
-  <section class="modal addFolderModal hidden">
+  <section class="modal addFolderModal">
       <div class="addFolderContainer">
         <div class="addFolderHeader">
           <h1>New Folder</h1>
@@ -164,7 +164,7 @@ class PageLayout {
         </div>
       </div>
     </section>
-    <section class="modal alert hidden">
+    <section class="modal alert">
       <h1>Alert</h1>
       <p>All the data will be permanently erased. Do you want to proceed?</p>
       <div class="alertBtnContainer">
@@ -172,7 +172,7 @@ class PageLayout {
         <button id="no">No</button>
       </div>
     </section>
-    <section class="displayDetails modal hidden">
+    <section class="displayDetails modal">
       <div class="displayDetailsHeader">
       <h3></h3>
       <button class="closeDisplayDetails">X</button>
@@ -180,7 +180,7 @@ class PageLayout {
       <div class="displayContent">
       </div>
     </section>
-    <div class="overlay hidden"></div>`;
+    <div class="overlay"></div>`;
     this.body.insertAdjacentHTML('beforeend', modal);
   }
 }
