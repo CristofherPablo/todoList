@@ -18,27 +18,47 @@ class PageLogic {
     this.body.addEventListener('click', (evet) => {
       if (event.target.matches('.addPlus')) {
         const folderName = event.target.dataset.name;
+        const addTaskFrom = document.querySelector('#addTask');
+        this.wipeForm(addTaskFrom);
         this.openAddModal(folderName);
         return;
       } else if (event.target.matches('#eraseAll')) {
         this.openEraseAlert();
         return;
       } else if (event.target.matches('.addFolderBtn')) {
+        const addFolder = document.querySelector('.addFolderModal');
+        this.wipeForm(addFolder);
         this.openAddFolderModal();
-        return
-      }else if(event.target.matches('#closeAddTask')){
+        return;
+      } else if (event.target.matches('#closeAddTask')) {
         this.openAddModal();
         return;
-      }else if(event.target.matches('.cancelFolder')){
+      } else if (event.target.matches('.cancelFolder')) {
         this.openAddFolderModal();
         return;
-      }else if(event.target.matches('#no')){
+      } else if (event.target.matches('#no')) {
         this.openEraseAlert();
         return;
       }
     });
   }
-  
+
+  wipeForm(myForm) {
+    const inputs = myForm.querySelectorAll('input');
+    const textareas = myForm.querySelectorAll('textarea');
+
+    if (inputs.length != 0) {
+      inputs.forEach((input) => {
+        input.value = '';
+      });
+    }
+    if (textareas.length != 0) {
+      textareas.forEach((textarea) => {
+        textarea.value = '';
+      });
+    }
+  }
+
   openAddModal(folderName) {
     const folderTarget = document.querySelector('#addTask');
     folderTarget.classList.toggle('show');
