@@ -25,13 +25,17 @@ class PageLogic {
         return;
       } else if (event.target.matches('.addFolderBtn')) {
         this.openAddFolderModal();
+        return
+      }else if(event.target.matches('#closeAddTask')){
+        this.openAddModal();
+        return;
       }
     });
   }
 
   openAddModal(folderName) {
     const folderTarget = document.querySelector('#addTask');
-    folderTarget.classList.add('show');
+    folderTarget.classList.toggle('show');
     this.toggleOverlay();
   }
 

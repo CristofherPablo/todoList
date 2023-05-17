@@ -128,7 +128,7 @@ class PageLayout {
     const modal = `<section class="modal" id="addTask">
     <div class="modal-createHeader">
       <h1>Create a new Task</h1>
-      <button>X</button>
+      <button id="closeAddTask">X</button>
     </div>
     <div class="modal-createContent">
       <input type="text" maxlength="20" placeholder="Title"/>
