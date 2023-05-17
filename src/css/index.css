@@ -7,14 +7,14 @@ Basic CSS styles for a page layout with header, main content, and footer section
   --color-tertiary: #444654;
   --color-quaternary: #343541;
   --font-color: #ffffff;
-  --font-color-table:#ffffff; 
+  --font-color-table: #ffffff;
 
   /* Button dark/light mode colors
   --button-background:#89c7e7;
   --button-circle:#f8ed62;
  */
-  --button-background:#444654;
-  --button-circle:#fffec8;
+  --button-background: #444654;
+  --button-circle: #fffec8;
 }
 
 .light-mode {
@@ -23,7 +23,7 @@ Basic CSS styles for a page layout with header, main content, and footer section
   --color-tertiary: #f4eae6;
   --color-quaternary: #f4eae6;
   --font-color: #ffffff;
-  --font-color-table:#000000; 
+  --font-color-table: #000000;
 
   /* Button dark/light mode colors #ffa17f */
   --button-background: #131862;
@@ -39,7 +39,7 @@ html {
   height: 100%;
 }
 
-body{
+body {
   display: flex;
   position: relative;
   justify-content: center;
@@ -131,7 +131,7 @@ header img {
 }
 
 .fa-sun {
-  color: 	#fffec8;
+  color: #fffec8;
 }
 
 /*Class to hide all the attributes to help the app be more accessible for screen readers */
@@ -173,15 +173,17 @@ footer a:hover {
 }
 
 /* hidden class*/
-.show{
+.show {
   opacity: 1;
+  z-index: 200;
 }
-.overlay.show{
+.overlay.show {
   opacity: 1;
   pointer-events: auto;
 }
 
-.modal.show{
+.modal.show {
+  z-index: 200;
   opacity: 1;
+  
 }
-

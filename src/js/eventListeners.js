@@ -44,7 +44,7 @@ class PageLogic {
   openAddFolderModal() {
     const addFolder = document.querySelector('.addFolderModal');
     addFolder.classList.add('show');
-    
+    this.toggleOverlay();
   }
 
   toggleOverlay() {

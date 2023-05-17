@@ -26,7 +26,7 @@ class PageLayout {
     this.renderHeader();
     this.renderMainSection();
     this.renderFooter();
-    //this.renderModal();
+    this.renderModal();
   }
 
   renderHeader() {
@@ -124,7 +124,73 @@ class PageLayout {
     this.container.insertAdjacentHTML('beforeend', footer);
   }
 
-  
+  renderModal() {
+    const modal = `<section class="modal" id="addTask">
+    <div class="modal-createHeader">
+      <h1>Create a new Task</h1>
+      <button>X</button>
+    </div>
+    <div class="modal-createContent">
+      <input type="text" maxlength="20" placeholder="Title"/>
+      <textarea rows="6" cols="50" placeholder="Details" /></textarea>
+    </div>
+    <div class="modal-createFooter">
+      <div class="modal-footerBtnContainer">
+        <div class="date-modalFooter">
+          <p>Due Date:</p>
+          <input type="date" name="calendar" id="dueDate" />
+        </div>
+        <div class="priority-modalFooter">
+          <p>Priority: </p>
+          <button class="lowBtn">Low</button>
+          <button class="mediumBtn">Medium</button>
+          <button class="highBtn">High</button>
+        </div>
+      </div>
+      <button type="submit" class="modal-createSubmitBtn">Add Task</button>
+    </div>
+  </section>
+
+  <section class="modal addFolderModal">
+  <div class="addFolderContainer">
+    <div class="addFolderHeader">
+      <h1>New Folder</h1>
+    </div>
+      <div class="addFolderContent">
+        <input type="text" placeholder="Title" maxlength="33">
+        <div>
+          <button class="submitFolder" type="submit">Add Folder</button>
+          <button class="cancelFolder">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="modal alert">
+      <h1>Alert</h1>
+      <p>All the data will be permanently erased. Do you want to proceed?</p>
+      <div class="alertBtnContainer">
+        <button id="yes">Yes</button>
+        <button id="no">No</button>
+      </div>
+  </section>
+
+
+  <section class="displayDetails modal">
+      <div class="displayDetailsHeader">
+      <h3></h3>
+      <button class="closeDisplayDetails">X</button>
+      </div>
+      <div class="displayContent">
+      </div>
+  </section>
+
+
+  <div class="overlay"></div>
+  `;
+    // appending it to the body
+    this.body.insertAdjacentHTML('beforeend', modal);
+  }
 }
 
 //basic page logic
