@@ -11,7 +11,7 @@
   transition: 1s;
 
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 /* specifications to Create a Task modal */
