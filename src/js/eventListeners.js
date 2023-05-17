@@ -29,10 +29,16 @@ class PageLogic {
       }else if(event.target.matches('#closeAddTask')){
         this.openAddModal();
         return;
+      }else if(event.target.matches('.cancelFolder')){
+        this.openAddFolderModal();
+        return;
+      }else if(event.target.matches('#no')){
+        this.openEraseAlert();
+        return;
       }
     });
   }
-
+  
   openAddModal(folderName) {
     const folderTarget = document.querySelector('#addTask');
     folderTarget.classList.toggle('show');
@@ -41,13 +47,13 @@ class PageLogic {
 
   openEraseAlert() {
     const alert = document.querySelector('.alert');
-    alert.classList.add('show');
+    alert.classList.toggle('show');
     this.toggleOverlay();
   }
 
   openAddFolderModal() {
     const addFolder = document.querySelector('.addFolderModal');
-    addFolder.classList.add('show');
+    addFolder.classList.toggle('show');
     this.toggleOverlay();
   }
 
